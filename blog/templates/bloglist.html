@@ -1,0 +1,6 @@
+{% for blog in blogs %}
+    <h1>제목: {{blog.title}}</h1>
+    <p>날짜: {{blog.created_at}}</p>
+    <p>내용: {{blog.summary}}<a href="{% url 'detail' blog.id %}">...더보기</a></p>
+    <br/>
+{% endfor %}
